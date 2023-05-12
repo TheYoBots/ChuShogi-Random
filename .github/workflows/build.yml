@@ -1,4 +1,4 @@
-name: YoBot Bronze
+name: Chushogi Random
 
 on: [push, pull_request]
 
@@ -14,8 +14,9 @@ jobs:
       run: pip install pyinstaller
       
     - name: PyInstaller Windows
-      run: pyinstaller -D -F -n ChuShogi-Random -w "chushogi.py"
-      run: pyinstaller -D -F -n ChuShogi-Random-Test -w "chushogi_test.py"
+      run: |
+        pyinstaller -D -F -n ChuShogi-Random -w "chushogi.py"
+        pyinstaller -D -F -n ChuShogi-Random-Test -w "chushogi_test.py"
 
     - uses: actions/upload-artifact@v3
       with:
@@ -38,8 +39,9 @@ jobs:
       run: pip install pyinstaller
 
     - name: PyInstaller Linux
-      run: pyinstaller -D -F -n ChuShogi-Random -c "chushogi.py"
-      run: pyinstaller -D -F -n ChuShogi-Random-Test -c "chushogi_test.py"
+      run: |
+        pyinstaller -D -F -n ChuShogi-Random -c "chushogi.py"
+        pyinstaller -D -F -n ChuShogi-Random-Test -c "chushogi_test.py"
 
     - uses: actions/upload-artifact@v3
       with:
