@@ -15,7 +15,7 @@ An example of the usi commands execution is shown below. The bestmove is provide
 > readyok
 
 < usinewgame
-< position lfcsgekgscfl/a1b1txot1b1a/mvrhdqndhrvm/pppppppppppp/3i4i3/12/12/3I4I3/PPPPPPPPPPPP/MVRHDNQDHRVM/A1B1TOXT1B1A/LFCSGKEGSCFL b - 1
+< position startpos
 < go
 
 > bestmove k7l6
