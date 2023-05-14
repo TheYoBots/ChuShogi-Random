@@ -1,4 +1,5 @@
 import random
+import sys
 
 # Board size
 BOARD_SIZE = 12
@@ -104,7 +105,7 @@ def parse_usi_command(command):
         usi_move = f"bestmove {chr(src_col + 97)}{src_row + 1}{chr(dest_col + 97)}{dest_row + 1}"
         print(usi_move)
     elif tokens[0] == 'quit':
-        quit()
+        sys.exit()
 
 # Main game loop
 def main():
@@ -115,7 +116,7 @@ def main():
             command = input()
             parse_usi_command(command)
     except KeyboardInterrupt:
-        quit()
+        sys.exit()
 
 if __name__ == '__main__':
     main()
