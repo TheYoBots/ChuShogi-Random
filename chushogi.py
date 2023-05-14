@@ -5,7 +5,20 @@ BOARD_SIZE = 12
 
 # Function to initialize the game board
 def initialize_board():
-    board = [['.' for _ in range(BOARD_SIZE)] for _ in range(BOARD_SIZE)]
+    board = [
+        ['l', 'f', 'c', 's', 'g', 'e', 'k', 'g', 's', 'c', 'f', 'l'],
+        ['a', '.', 'b', '.', 't', 'x', 'o', 't', '.', 'b', '.', 'a'],
+        ['m', 'v', 'r', 'h', 'd', 'q', 'n', 'd', 'h', 'r', 'v', 'm'],
+        ['p', 'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'],
+        ['.', '.', '.', 'i', '.', '.', '.', '.', 'i', '.', '.', '.'],
+        ['.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.'],
+        ['.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.'],
+        ['.', '.', '.', 'i', '.', '.', '.', '.', 'i', '.', '.', '.'],
+        ['P', 'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'],
+        ['M', 'V', 'R', 'H', 'D', 'N', 'Q', 'D', 'H', 'R', 'V', 'M'],
+        ['A', '.', 'B', '.', 'T', 'O', 'X', 'T', '.', 'B', '.', 'A'],
+        ['L', 'F', 'C', 'S', 'G', 'K', 'E', 'G', 'S', 'C', 'F', 'L']
+    ]
     return board
 
 # Function to display the game board
@@ -47,7 +60,7 @@ def make_move(board, move):
 
 # Function to parse SFEN and set up the board
 def parse_sfen(sfen):
-    board = [['.' for _ in range(BOARD_SIZE)] for _ in range(BOARD_SIZE)]
+    board = initialize_board()
     sfen_rows = sfen.split('/')
     row_index = 0
     for sfen_row in sfen_rows:
